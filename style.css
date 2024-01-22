@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-button {
+    position: absolute;
+    top:  20%;
+    transform: translateY(-50%);
+    background-color: #82beff;
+    color: white;
+    border: none;
+    border-radius: 20%;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: #005bbc;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
