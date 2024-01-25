@@ -1,53 +1,33 @@
-let slideIndex = 0;
-let slideInterval;
-
-function showSlides() {
-    let slides = document.getElementsByClassName("slides")[0];
-    let images = slides.getElementsByTagName("img");
-    slideIndex++;
-    if (slideIndex >= images.length) {
-        slideIndex = 0;
-    }
-    updateArrowState();
-    let slideWidth = 100 / images.length; // 각 슬라이드의 너비 비율
-    slides.style.transform = `translateX(-${slideIndex * slideWidth}%)`;
-}
-
-function updateArrowState() {
-    let leftArrow = document.getElementById("prev");
-    let rightArrow = document.getElementById("next");
-    // 첫 번째 이미지에서 왼쪽 화살표 활성화, 두 번째 이미지에서 오른쪽 화살표 활성화
-    if (slideIndex === 0) {
-        leftArrow.classList.add("active");
-        rightArrow.classList.remove("active");
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    var navMenu = document.getElementById('nav-menu');
+    if (navMenu.style.display === 'block') {
+        navMenu.style.display = 'none';
     } else {
-        rightArrow.classList.add("active");
-        leftArrow.classList.remove("active");
+        navMenu.style.display = 'block';
     }
-}
-
-function startSlideShow() {
-    slideInterval = setInterval(showSlides, 2000);
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-    startSlideShow();
-    updateArrowState(); // 초기 화살표 상태 업데이트
 });
 
-document.getElementById("prev").addEventListener("click", function() {
-    slideIndex = (slideIndex - 1 + images.length) % images.length;
-    showSlides();
-    resetInterval();
+// 햄버거 메뉴 아이콘에 마우스가 올라갔을 때 이벤트 리스너 추가
+document.getElementById('hamburger-menu').addEventListener('mouseenter', function() {
+    // 'nav-menu' ID를 가진 요소를 찾아 navMenu 변수에 할당
+    var navMenu = document.getElementById('nav-menu');
+    // navMenu의 display 스타일을 'block'으로 설정하여 메뉴를 표시
+    navMenu.style.display = 'block';
 });
 
-document.getElementById("next").addEventListener("click", function() {
-    slideIndex = (slideIndex + 1) % images.length;
-    showSlides();
-    resetInterval();
+// nav-menu 에 마우스가 올라갔을 때 이벤트 리스너 추가
+document.getElementById('nav-menu').addEventListener('mouseenter', function() {
+    // 'nav-menu' ID를 가진 요소를 찾아 navMenu 변수에 할당
+    var navMenu = document.getElementById('nav-menu');
+    // navMenu의 display 스타일을 'block'으로 설정하여 메뉴를 표시
+    navMenu.style.display = 'block';
 });
 
-function resetInterval() {
-    clearInterval(slideInterval);
-    slideInterval = setInterval(showSlides, 2000);
-}
+// 햄버거 메뉴 아이콘에서 마우스가 벗어났을 때 이벤트 리스너 추가
+document.getElementById('hamburger-menu').addEventListener('mouseleave', function() {
+    // 'nav-menu' ID를 가진 요소를 찾아 navMenu 변수에 할당
+    var navMenu = document.getElementById('nav-menu');
+    // navMenu의 display 스타일을 'none'으로 설정하여 메뉴를 숨김
+    navMenu.style.display = 'none';
+});
+
