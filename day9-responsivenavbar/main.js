@@ -31,23 +31,3 @@ document.getElementById('hamburger-menu').addEventListener('mouseleave', functio
     navMenu.style.display = 'none';
 });
 
-
-document.getElementById('login-form').addEventListener('submit', function(event) {
-    var userId = document.getElementById('id_form').value;
-    var password = document.getElementById('psd_form').value;
-
-    // 아이디 또는 비밀번호가 공란인지 검사
-    if (userId === '' || password === '') {
-        event.preventDefault(); // 폼 제출 방지
-        alert('아이디 혹은 비밀번호가 입력되지 않았습니다.');
-    } else if (userId === '1010' && password === '1010') {
-        // 로그인 성공 처리
-        event.preventDefault(); // 폼 제출 방지
-        alert('로그인이 되었습니다. !');
-    } else {
-        // 로그인 실패 처리
-        event.preventDefault(); // 폼 제출 방지
-        alert('아이디 또는 비밀번호가 잘못되었습니다.');
-    }
-});
-

@@ -30,7 +30,6 @@
     margin: 0 20px;
     font-size: large;
     font-weight: bold;
-    border-radius: 10px; /* 동글한 느낌 추가 */
 }
 
 #nav-menu li a:hover {
@@ -77,53 +76,3 @@
         display: block; /* 햄버거 메뉴 표시 */
     }
 }
-.login-box {
-    width: 60%; /* 로그인 박스의 너비 조정 */
-    padding: 20px;
-    margin: 50px auto; /* 상하 여백과 가운데 정렬 */
-    background-color: rgb(230, 240, 255); /* 연한 블루 컬러로 변경 */
-    border-radius: 15px; /* 동글한 느낌 추가 */
-    text-align: center;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
-}
-
-#login-form {
-    margin-right: auto;
-    margin-left: auto;
-}
-#submit-btn {
-    background-color: rgb(59, 133, 245);
-    color: whitesmoke;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    border: none;
-    padding: 10px 30px;
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-#submit-btn:hover {
-    transform: scale(1.05); /* 호버 시 5% 크기 증가 */
-    background-color: rgb(39, 103, 205); /* 호버 시 배경 색상 진하게 변경 */
-
-}
-
-#id_form, #psd_form {
-    width: 80%;
-    padding: 10px;
-    margin: 5px 0 15px 0; /* 아래쪽 여백 추가로 필드 간격 조정 */
-    border: 1px solid #bbb; /* 경계선 색상을 더 부드럽게 변경 */
-    background-color: #f0f0f0; /* 입력 필드 배경색 변경 */
-    border-radius: 20px; /* 더 동그랗게 변경 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
-    transition: all 0.3s ease-in-out; /* 부드러운 효과를 위한 전환 추가 */
-}
-
-#id_form:focus, #psd_form:focus {
-    outline: none; /* 포커스 시 윤곽선 제거 */
-    border-color: rgb(65, 144, 255); /* 포커스 시 경계선 색상 변경 */
-    background-color: #fff; /* 포커스 시 배경색 변경 */
-    box-shadow: 0 0 8px rgba(65, 144, 255, 0.8); /* 포커스 시 그림자 색상 변경 */
-}
-
