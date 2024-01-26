@@ -78,7 +78,7 @@
     }
 }
 .login-box {
-    width: 60%; /* 로그인 박스의 너비 조정 */
+    width: 300px;
     padding: 20px;
     margin: 50px auto; /* 상하 여백과 가운데 정렬 */
     background-color: rgb(230, 240, 255); /* 연한 블루 컬러로 변경 */
@@ -110,7 +110,7 @@
 }
 
 #id_form, #psd_form {
-    width: 80%;
+    width: 200px;
     padding: 10px;
     margin: 5px 0 15px 0; /* 아래쪽 여백 추가로 필드 간격 조정 */
     border: 1px solid #bbb; /* 경계선 색상을 더 부드럽게 변경 */
